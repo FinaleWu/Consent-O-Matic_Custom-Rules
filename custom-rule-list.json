@@ -1,5 +1,6 @@
 {
   "references": [
-    "https://raw.githubusercontent.com/FinaleWu/Consent-O-Matic_Custom-Rules/master/sourcepoint_frame_custom.json"
+    "https://raw.githubusercontent.com/FinaleWu/Consent-O-Matic_Custom-Rules/master/sourcepoint_frame_custom.json",
+    "https://raw.githubusercontent.com/FinaleWu/Consent-O-Matic_Custom-Rules/master/onetrust_banner_custom.json"
   ]
 }
