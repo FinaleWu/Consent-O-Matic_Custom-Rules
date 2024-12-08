@@ -1,0 +1,80 @@
+{
+    "$schema": "https://raw.githubusercontent.com/cavi-au/Consent-O-Matic/master/rules.schema.json",
+    "sourcepoint_frame_custom": {
+        "detectors": [
+            {
+                "presentMatcher": [
+                    {
+                        "type": "css",
+                        "target": {
+                            "selector": ".message-container .message-component.message-row.bottom-row, .message-container .message-component.message-row.mobile-reverse",
+                            "iframeFilter": true
+                        }
+                    }
+                ],
+                "showingMatcher": [
+                    {
+                        "type": "css",
+                        "target": {
+                            "selector": ".message-container .message-component.message-row.bottom-row, .message-container .message-component.message-row.mobile-reverse",
+                            "iframeFilter": true,
+                            "displayFilter": true
+                        }
+                    }
+                ]
+            }
+        ],
+        "methods": [
+            {
+                "action": {
+                    "type": "list",
+                    "actions": [
+                        {
+                            "type": "hide",
+                            "target": {
+                                "selector": ".message-component.message-row.bottom-row, .message-component.message-row.mobile-reverse"
+                            }
+                        },
+                        {
+                            "type": "hide",
+                            "target": {
+                                "selector": ".message-overlay"
+                            },
+                            "forceHide": true
+                        }
+                    ]
+                },
+                "name": "HIDE_CMP"
+            },
+            {
+                "action": {
+                    "type": "list",
+                    "actions": [
+                        {
+                            "type": "ifcss",
+                            "target": {
+                                "selector": "button.message-component.message-button.sp_choice_type_11"
+                            },
+                            "trueAction": {
+                                "type": "click",
+                                "target": {
+                                    "selector": "button.message-component.message-button.sp_choice_type_11"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "name": "OPEN_OPTIONS"
+            },
+            {
+                "action": {
+                    "type": "click",
+                    "target": {
+                        "selector": "button.message-component.message-button.sp_choice_type_SAVE_AND_EXIT"
+                    }
+                },
+                "name": "SAVE_CONSENT"
+            }
+        ]
+    }
+}
