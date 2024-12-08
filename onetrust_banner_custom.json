@@ -65,13 +65,13 @@
                             "target": {
                                 "selector": "#onetrust-pc-btn-handler, #cookie-consent-preferences"
                             },
-                            "trueAction": {
+                            "falseAction": {
                                 "type": "click",
                                 "target": {
                                     "selector": "#onetrust-pc-btn-handler, #cookie-consent-preferences"
                                 }
                             },
-                            "falseAction": {
+                            "trueAction": {
                                 "type": "click",
                                 "target": {
                                     "selector": "#onetrust-accept-btn-handler"
